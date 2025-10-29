@@ -1,0 +1,274 @@
+/* ===== Estilo base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", system-ui, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f8f9fb;
+  color: #1a1a1a;
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background 0.4s, color 0.4s;
+}
+
+/* ===== Animaciones globales ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Encabezado ===== */
+header {
+  text-align: center;
+  padding: 90px 20px 60px;
+  background: linear-gradient(145deg, #ffffff, #f0f2f5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #0b0b0b;
+  letter-spacing: -0.5px;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 12px;
+}
+
+/* ===== Secciones generales ===== */
+section {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 0 20px;
+  animation: fadeInUp 1s ease-out;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #0b0b0b;
+  position: relative;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+section h2::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #007aff, #00b4d8);
+}
+
+section p {
+  font-size: 1.05rem;
+  color: #333;
+}
+
+/* ===== Herramientas / Skills ===== */
+.skills .tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.tools span {
+  background: #fff;
+  border: 1px solid #e3e3e3;
+  border-radius: 50px;
+  padding: 12px 24px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.tools span:hover {
+  background: linear-gradient(135deg, #007aff, #00b4d8);
+  color: #fff;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 122, 255, 0.25);
+}
+
+/* ===== Proyectos ===== */
+.project-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: contain;
+  background: #f9f9f9;
+  padding: 40px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.04);
+}
+
+.project-info {
+  padding: 35px;
+}
+
+.project-info h3 {
+  font-size: 1.6rem;
+  color: #0b0b0b;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.project-info p {
+  color: #444;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* ===== Botón PDF ===== */
+.pdf-link {
+  display: inline-block;
+  margin: 60px auto;
+  padding: 14px 36px;
+  background: linear-gradient(135deg, #007aff, #00b4d8);
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 500;
+  border-radius: 50px;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 6px 20px rgba(0, 122, 255, 0.3);
+}
+
+.pdf-link:hover {
+  transform: translateY(-4px);
+  background: linear-gradient(135deg, #005fd1, #0090c1);
+  box-shadow: 0 8px 30px rgba(0, 122, 255, 0.45);
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 0.95rem;
+  color: #666;
+  background: #f4f4f4;
+  margin-top: 100px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* ===== Modo oscuro automático ===== */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #0d1117;
+    color: #e6edf3;
+  }
+
+  header {
+    background: linear-gradient(145deg, #161b22, #0d1117);
+  }
+
+  header h1 {
+    color: #f2f6fc; /* blanco suave */
+  }
+
+  header p {
+    color: #c9d1d9;
+  }
+
+  section h2 {
+    color: #e6edf3; /* gris claro legible */
+  }
+
+  section p {
+    color: #c9d1d9; /* gris claro */
+  }
+
+  section h2::after {
+    background: linear-gradient(90deg, #007aff, #00b4d8);
+  }
+
+  .tools span {
+    background: #161b22;
+    border: 1px solid #222;
+    color: #e6edf3; /* texto claro */
+  }
+
+  .project-card {
+    background: #161b22;
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.05);
+  }
+
+  .project-info h3 {
+    color: #f0f6fc; /* título claro */
+  }
+
+  .project-info p {
+    color: #c9d1d9;
+  }
+
+  .pdf-link {
+    background: linear-gradient(135deg, #007aff, #00b4d8);
+  }
+
+  footer {
+    background: #161b22;
+    color: #aaa;
+    border-top: 1px solid #222;
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  section h2 {
+    font-size: 1.6rem;
+  }
+
+  .project-info {
+    padding: 25px;
+  }
+
+  .pdf-link {
+    margin: 40px auto;
+    font-size: 0.95rem;
+    padding: 12px 28px;
+  }
+}
+
+
