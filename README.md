@@ -2,7 +2,7 @@
 
 Sitio web de portafolio personal desarrollado íntegramente con HTML5 y CSS3, sin frameworks ni dependencias externas. Presenta mis proyectos, certificaciones y habilidades técnicas.
 
-**Demo en vivo:** _Se actualizará tras el deploy en GitHub Pages_
+**Demo en vivo:** https://morafelipe.github.io/portafolio-web/
 
 ---
 
